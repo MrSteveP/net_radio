@@ -1,0 +1,115 @@
+# .NET MAUI & Visual Studio
+bin/
+obj/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.csproj.user
+*.dbmdl
+*.dbmdl.*
+*.pdb
+*.cache
+*.log
+*.vs/
+.vscode/
+.vsconfig
+*.sln.docstates
+
+# Build results
+[Bb]uild/
+[Ll]og/
+TestResults/
+*.app/
+*.apk
+*.ap_
+*.aab
+*.xcuserstate
+*.xcworkspace
+*.xcuserdata
+*.xcodeproj
+*.ipa
+*.dll
+*.exe
+
+# MAUI/Android/iOS/WinUI specific
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+*.jar
+*.keystore
+*.jks
+*.pfx
+*.cer
+*.der
+*.so
+*.dylib
+*.bundle
+*.xcarchive
+*.xcuserstate
+*.xcworkspace
+*.xcuserdata
+*.xcodeproj
+*.ipa
+
+# MacCatalyst
+*.app
+*.dSYM/
+
+# Tizen
+*.tpk
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nuspec
+
+# Others
+*.DS_Store
+*.AppleDouble
+*.LSOverride
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Rider
+.idea/
+*.sln.iml
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Local history for Visual Studio Code
+.history/
+
+# Maui generated
+Platforms/Android/obj/
+Platforms/Android/bin/
+Platforms/iOS/obj/
+Platforms/iOS/bin/
+Platforms/MacCatalyst/obj/
+Platforms/MacCatalyst/bin/
+Platforms/Windows/obj/
+Platforms/Windows/bin/
+Platforms/Tizen/obj/
+Platforms/Tizen/bin/
+
+# User secrets
+secrets.json
+
+# Temporary files
+*.tmp
+*.temp

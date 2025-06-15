@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:views="clr-namespace:net_radio.Views"
+             x:Class="net_radio.MainPage">
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarStyle="DarkContent" StatusBarColor="Blue" />
+    </ContentPage.Behaviors>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <SearchBar Grid.Row="0" Placeholder="Search Stations" Text="{Binding SearchText}" />
+        <ScrollView Grid.Row="1">
+            <StackLayout>
+                <CollectionView ItemsSource="{Binding FilteredStations}" SelectionMode="Single" SelectedItem="{Binding SelectedStation}" SelectionChanged="OnStationChanged">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <Image Source="{Binding Favicon}" WidthRequest="40" HeightRequest="40"/>
+                                <StackLayout Padding="10,0,0,0">
+                                    <Label Text="{Binding Name}" FontAttributes="Bold"/>
+                                    <Label Text="{Binding CurrentSong}" FontAttributes="Italic"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <toolkit:MediaElement
+                    Source="{Binding CurrentStreamUrl}"
+                    ShouldAutoPlay="True"
+                    HeightRequest="0" />
+            </StackLayout>
+        </ScrollView>
+        <views:AudioVisualizerView Grid.Row="2" x:Name="AudioVisualizer" HeightRequest="60" VerticalOptions="End" IsVisible="{Binding IsPlaying}" />
+    </Grid>
+
+</ContentPage>

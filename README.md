@@ -16,6 +16,9 @@ A cross-platform .NET MAUI radio streaming app that lets you browse, search, and
 
 ![Image 1](screenshots/net_radio.png)
 
+## Project Structure
+
+```
 net_radio/
 ├── App.xaml.cs
 ├── MainPage.xaml
@@ -39,6 +42,7 @@ net_radio/
 │           │   └── colors.xml
 │           └── xml/
 │               └── network_security_config.xml
+```
 
 ## Getting Started
 
